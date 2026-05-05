@@ -38,7 +38,7 @@ Pour maintenir une hygiène de code optimale, les composants sont découpés log
 - **`source/components/simulator/`** : Interface de test mobile et moteur de rendu de conversation.
 - **`source/components/sidebar/`** : Panneau de configuration et bibliothèque de blocs.
 
-## 🚀 Comment lancer le projet localement
+## 🚀 Comment lancer le projet localement : 
 
 ### Prérequis
 - Node.js 18+
