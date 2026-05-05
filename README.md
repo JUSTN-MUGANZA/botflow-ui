@@ -27,9 +27,16 @@ Ce projet a été réalisé avec une attention particulière à l'expérience ut
 - **Framework :** [Next.js (App Router)](https://nextjs.org/)
 - **Langage :** [TypeScript](https://www.typescriptlang.org/)
 - **Style :** [Tailwind CSS](https://tailwindcss.com/)
-- **Éditeur Graphe :** [React Flow (@xyflow/react)](https://reactflow.dev/) (Choisi pour sa robustesse absolue en matière d'UI nodale, son support du zoom/pan et de l'accessibilité).
-- **State Management :** [Zustand](https://github.com/pmndrs/zustand) (Plus léger que Redux, parfait pour lier le canevas au simulateur sans *prop drilling* excessif et avec le middleware de persistance inclus).
+- **Éditeur Graphe :** [React Flow (@xyflow/react)](https://reactflow.dev/)
+- **State Management :** [Zustand](https://github.com/pmndrs/zustand)
 - **Icônes :** [Lucide React](https://lucide.dev/)
+
+### Organisation des fichiers
+Pour maintenir une hygiène de code optimale, les composants sont découpés logiquement sous le répertoire `source/` :
+- **`source/components/canvas/`** : Gestion de la zone de dessin et de la logique React Flow.
+- **`source/components/nodes/`** : Définition des types de nœuds personnalisés.
+- **`source/components/simulator/`** : Interface de test mobile et moteur de rendu de conversation.
+- **`source/components/sidebar/`** : Panneau de configuration et bibliothèque de blocs.
 
 ## 🚀 Comment lancer le projet localement
 
@@ -40,21 +47,12 @@ Ce projet a été réalisé avec une attention particulière à l'expérience ut
 ### Installation
 
 1. Installez les dépendances :
-```bash
+bash
+
 npm install
-```
-
 2. Lancez le serveur de développement :
-```bash
+
+Bash
 npm run dev
-```
-
-3. Ouvrez votre navigateur sur :
-**[http://localhost:3000](http://localhost:3000)**
-
-## 💡 Remarques d'implémentation
-- **Hygiène de code :** Les composants sont découpés logiquement (`canvas/`, `nodes/`, `simulator/`, `sidebar/`).
-- **Modele de données simple :** L'état global stocke les nœuds bruts (`nodes`) et les connexions (`edges`). Le simulateur se charge de l'intelligence de parcours du graphe de manière récursive asynchrone.
-
----
-*Réalisé pour Karaba.*
+Ouvrez votre navigateur sur :
+http://localhost:3000
